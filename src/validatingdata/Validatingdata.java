@@ -17,7 +17,7 @@ public class Validatingdata {
     /**
      * @param args the command line arguments
      */
-    public static Scanner scan = new Scanner(System.in);
+    public static Scanner keyedinput = new Scanner(System.in);
         
     
 
@@ -34,12 +34,12 @@ public class Validatingdata {
     }
 
     public static String getInput() {
-        String input = scan.nextLine();
+        String input = keyedinput.nextLine();
         return input;
     }
 
     public static void case1() {
-        System.out.println("Enter a string greater than 6 characters:");
+        System.out.println("Enter a word 6 letters or Longer than 6 Letters:");
         String input = getInput();
         boolean valid = false;
         while (!valid) {
@@ -47,11 +47,11 @@ public class Validatingdata {
                 valid = true;
             } else {
                 valid = false;
-                System.out.println("That input is not valid. Please enter a string greater than 6 characters");
+                System.out.println("That input is not under 6 letters . Please enter a string greater than 6 characters");
                 input = getInput();
             }
         }
-        System.out.println("Congratulations, you passed this stage!");
+        System.out.println("Congratulations, you moved onto the next stage!");
     }
     
     public static void case2() {
@@ -71,23 +71,23 @@ public class Validatingdata {
     }
 
     public static void case3() {
-        System.out.println("Enter a string between 5 and 15 characters long, and does not contain a \'z\':");
+        System.out.println("Enter a string between 5 and 15 letter long, and does not contain a 'e':");
         String input = getInput();
         boolean valid = false;
         while (!valid) {
-            if (!input.contains("z") && input.length() >= 5 && input.length() <= 15) {
+            if (!input.contains("e") && input.length() >= 5 && input.length() <= 15) {
                 valid = true;
             } else {
                 valid = false;
-                System.out.println("That input is not valid. Please enter a string between 5 and 15 characters long, and does not contain a \'z\'");
+                System.out.println("That input is invalid. try  Entering a string between 5 and 15 characters long, and does not contain a \'z\'");
                 input = getInput();
             }
         }
-        System.out.println("Congratulations, you passed this stage!");
+        System.out.println("Congratulations, you moved onto the third  stage!");
     }
 
     public static void case4() {
-        System.out.println("Enter an integer between 5 and 500:");
+        System.out.println("Enter an number between 5 and 500:");
         String input = getInput();
         boolean valid = false;
         int num;
@@ -102,11 +102,11 @@ public class Validatingdata {
                 }
             } catch (NumberFormatException nfe) {
                 valid = false;
-                System.out.println("That input is not valid. Please enter an integer between 5 and 500.");
+                System.out.println("That number is not between 5 and 500. Please try a number between 5 and 500.");
                 input = getInput();
             }
         }
-        System.out.println("Congratulations, you passed this stage!");
+        System.out.println("Congratulations, you passed the 3rd stage!");
     }
     
     public static void case5() {
@@ -129,7 +129,7 @@ public class Validatingdata {
                 input = getInput();
             }
         }
-        System.out.println("Congratulations, you passed this stage!");
+        System.out.println("Congratulations, you passed the 4th stage!");
     }
     
     public static void case6() {
@@ -148,10 +148,10 @@ public class Validatingdata {
                 }
             } catch (NumberFormatException nfe) {
                 valid = false;
-                System.out.println("That input is not valid. Please enter a positive, odd integer.");
+                System.out.println("That input is not postive and odd. Please enter a positive, odd number.");
                 input = getInput();
             }
         }
-        System.out.println("Congratulations, you passed every stage!");
+        System.out.println("Congratulations, you completed the test!");
     }
 }
